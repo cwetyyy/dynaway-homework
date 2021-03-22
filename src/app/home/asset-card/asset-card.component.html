@@ -1,4 +1,4 @@
-<ng-container *ngIf="asset; else skeletonCard">
+<ng-container *ngIf="asset && !loading; else skeletonCard">
   <ion-card button (click)="navigateToDetail(asset.id)">
     <div *ngIf="asset" class="card-content-wrapper">
       <ion-card-content>

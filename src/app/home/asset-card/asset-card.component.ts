@@ -10,12 +10,17 @@ import { getRandomWidth } from '../../shared/functions'
 })
 export class AssetCardComponent {
   @Input() asset?: Asset
+  @Input() loading?: boolean;
 
   skeletonWidths = [0, 1, 2].map(() => getRandomWidth(20, 70))
 
   constructor(private router: Router) {}
 
+  ngOnInit() {
+    console.log(this.loading + ' asset-card');
+ }
+
   async navigateToDetail(assetId: string): Promise<void> {
-    await this.router.navigate(['asset', assetId])
+    await this.router.navigate(['asset', assetId]);
   }
 }

@@ -16,7 +16,7 @@
   <ion-grid class="list">
     <ion-row>
       <ion-col *ngFor="let asset of assets" size-xl="4" size-md="6" size="12">
-        <app-asset-card [asset]="asset"></app-asset-card>
+        <app-asset-card [loading]="loading" [asset]="asset"></app-asset-card>
       </ion-col>
     </ion-row>
   </ion-grid>
